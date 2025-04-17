@@ -5,20 +5,23 @@ function Home() {
 
     let navigate = useNavigate();
 
-    function loginClick() {
-        navigate('/login')
-    }
-
-    function registerClick() {
-        navigate('/register')
-    }
 
   return (
-    <div>
+    <div className="flex min-h-screen bg-black">
+
+      <div className="w-64 bg-gray-800 text-white flex flex-col items-center py-6">
+        <h2 className="text-2xl font-bold mb-6"> Dashboard </h2>
+
+        <ul className="w-full">
+          <li className="w-full px-4 py-2 hover:bg-gray-700 cursor-pointer" onClick={() => navigate('/home')}> Home </li>
+          <li className="w-full px-4 py-2 hover:bg-gray-700 cursor-pointer" onClick={() => navigate('/profile')}> Profile </li>
+          <li className="w-full px-4 py-2 hover:bg-gray-700 cursor-pointer"> Setting </li>
+          <li className="w-full px-4 py-2 hover:bg-gray-700 cursor-pointer" onClick={() => navigate('/login')}> Logout </li>
+        </ul>
+      </div>
         
-       <div className='flex justify-center my-60'>
-          <button onClick={loginClick} className=' w-32 mx-20 bg-green-700 text-white py-2 rounded hover:bg-green-800'> Login </button>
-          <button onClick={registerClick} className=' w-32 bg-purple-800 text-white py-2 rounded hover:bg-purple-900'> Sign Up </button>
+       <div className="flex-1 p-6">
+          <h1 className="font-bold text-2xl text-purple-800 text-center animate-pulse"> Welcome to Dashboard - Jyoti </h1>
        </div>
        
     </div>
