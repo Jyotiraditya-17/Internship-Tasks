@@ -1,9 +1,35 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
+import { auth , db } from "../../firebase/firebase.config";
+import { getDoc , doc } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
 
 
 function Home() {
 
-    let navigate = useNavigate();
+  const [username , setUserName] = useState('');
+
+  let navigate = useNavigate();
+
+ /* useEffect( () => {
+    const unsubscribe = onAuthStateChanged(auth , async (user) => {
+
+      if(user) {
+        await user.reload();
+        const refreshedUser = auth.currentUser;
+        console.log(refreshedUser);
+        setUserName(refreshedUser.displayName || "user" )
+      }
+      else {
+        navigate('/login')
+      }
+
+    });
+
+    return () => unsubscribe();
+
+    
+  } , [navigate]); */
 
 
   return (
@@ -16,7 +42,7 @@ function Home() {
           <li className="w-full px-4 py-2 hover:bg-gray-700 cursor-pointer" onClick={() => navigate('/home')}> Home </li>
           <li className="w-full px-4 py-2 hover:bg-gray-700 cursor-pointer" onClick={() => navigate('/profile')}> Profile </li>
           <li className="w-full px-4 py-2 hover:bg-gray-700 cursor-pointer"> Setting </li>
-          <li className="w-full px-4 py-2 hover:bg-gray-700 cursor-pointer" onClick={() => navigate('/login')}> Logout </li>
+          <li className="w-full px-4 py-2 hover:text-red-600 hover:bg-gray-700 cursor-pointer mt-80" onClick={() => navigate('/login')}> Logout </li>
         </ul>
       </div>
         
