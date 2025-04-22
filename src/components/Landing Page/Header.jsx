@@ -13,7 +13,7 @@ function Header() {
             <div className='bg-blue-500 w-10 h-10 rounded-full flex justify-center items-center'>
                 <Dna className='text-white text-2xl' />
             </div>
-            <span className='font-bold text-blue-500 text-4xl mx-2 pb-2'> naukri </span>
+            <span className='font-bold text-blue-500 text-4xl mx-2 pb-2'> FindJobs </span>
         </div>
 
         <div>
