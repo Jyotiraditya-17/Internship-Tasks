@@ -4,7 +4,7 @@ import React from 'react'
 function Section() {
   return (
     <div className='mx-14 my-14'>
-      <div className='flex justify-between'>
+      <div className='flex justify-between max-w-sm md:max-w-md lg:max-w-lg w-full'>
 
             <div className='border-gray-300 shadow-lg w-40 h-20 rounded-2xl'>
                 <div className='flex justify-between p-4'>
@@ -171,7 +171,7 @@ function Section() {
 
 
 
-      <div className='border-gray-100 rounded-2xl shadow-md my-10'>
+      <div className='border-gray-100 rounded-2xl shadow-md my-10 w-fit'>
         <img src='Section-adv.png' />
       </div>
 
