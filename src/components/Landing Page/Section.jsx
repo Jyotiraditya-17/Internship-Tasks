@@ -172,7 +172,7 @@ function Section() {
 
 
       <div className='border-gray-100 rounded-2xl shadow-md my-10'>
-        <img src='../../public/Section-adv.png' />
+        <img src='Section-adv.png' />
       </div>
 
     </div>
